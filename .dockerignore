@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+.git
+.gitignore
+README.md
+*.log
+run-*.ts
+test-*.ts
