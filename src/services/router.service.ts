@@ -10,8 +10,8 @@ export interface RoutingDecision {
 }
 
 export function evaluateComplexity(messages: Array<{ role: string; content: string }>, requestedModel?: string): RoutingDecision {
-  const defaultModel = requestedModel || process.env.DEFAULT_FLM_MODEL || 'gpt-4o';
-  const slmModel = process.env.DEFAULT_SLM_MODEL || 'gpt-3.5-turbo';
+  const defaultModel = requestedModel || process.env.DEFAULT_FLM_MODEL || 'gemini-2.0-flash';
+  const slmModel = process.env.DEFAULT_SLM_MODEL || 'gemini-1.5-flash';
 
   // Se o modelo solicitado já for um modelo leve, mantemos
   if (defaultModel.includes('3.5') || defaultModel.includes('mini') || defaultModel.includes('flash')) {
